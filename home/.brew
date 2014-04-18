@@ -58,3 +58,5 @@ brew install zsh
 
 pip install --upgrade setuptools
 pip install --upgrade pip
+
+brew cleanup
