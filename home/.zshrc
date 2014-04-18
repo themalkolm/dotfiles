@@ -2,9 +2,14 @@
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-export PATH=/usr/local/bin:$PATH
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/share/python:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
 
-export PATH=$PATH:/usr/local/share/python
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
@@ -39,17 +44,19 @@ export SAVEHIST=10000
 #   mkdir -p ~/.bin
 #   (test -e ~/.bin/$cmd) || (ln -s $(which g$cmd) ~/.bin/$cmd)
 # done
-export PATH=~/.bin:$PATH
+# export PATH=~/.bin:$PATH
 
 PROJECTS_DIR=~/Documents/projects
 
 # enable git-boots
-export PATH=$PROJECTS_DIR/git-boots:$PROJECTS_DIR/git-boots/sandbox:$PATH
-export PATH=$PROJECTS_DIR/git-imerge:$PATH
+export PATH="$PROJECTS_DIR/git-boots:$PATH"
+export PATH="$PROJECTS_DIR/git-boots/sandbox:$PATH"
 
-# enagle git-nucleo
-export PATH=$PROJECTS_DIR/git-nucleo:$PATH
-export PATH=$PROJECTS_DIR/git-nucleo/sandbox:$PATH
+export PATH="$PROJECTS_DIR/git-imerge:$PATH"
+
+# enable git-nucleo
+export PATH="$PROJECTS_DIR/git-nucleo:$PATH"
+export PATH="$PROJECTS_DIR/git-nucleo/sandbox:$PATH"
 
 # jumps
 alias j='cd'
@@ -165,22 +172,13 @@ function jira() {
 
 alias spm="npm -reg http://npm-registry.spotify.net -userconfig ~/.spmrc --always-auth=true"
 
-export PATH=$PROJECTS_DIR/client-daemon/build:$PATH
-
 export USE_CCACHE=1
 export CCACHE_CPP2=1
-export PATH=/usr/local/Cellar/ccache/3.1.9/libexec:$PATH
 
 # make go happy
 export GOPATH=$PROJECTS_DIR/go
 
 # automatically use these tools
-export PATH=$GOPATH/bin:$PATH
-
-#
-export PATH=$PROJECTS_DIR/git-extras/bin:$PATH
+export PATH="$GOPATH/bin:$PATH"
 
 alias review="git review -vvv"
-
-
-
