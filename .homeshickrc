@@ -1,7 +1,5 @@
 #!/bin/bash
 
-sudo -v # ask for password only at the beginning
-
 test $(which brew | wc -l) -eq 0 &&
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
