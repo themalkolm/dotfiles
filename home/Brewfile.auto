@@ -50,7 +50,7 @@ install midnight-commander
 install nano
 install ncurses --universal
 install nettle
-install node --enable-debug --without-completion --without-npm --devel
+install node --enable-debug --without-completion --without-npm
 install openssh --with-keychain-support --with-ldns
 install openssl
 install pcre --universal
