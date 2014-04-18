@@ -28,5 +28,6 @@ brew bundle "$(homesick show_path dotfiles)/home"
 
 brew cleanup
 
+# dunno, brew suggests me to do it
 pip install --upgrade setuptools
 pip install --upgrade pip
