@@ -1,0 +1,44 @@
+[user]
+	email = malkolm@spotify.com
+	name = Alexander Krasnukhin
+[color]
+	ui = true
+	diff = auto
+	status = auto
+	branch = auto
+[core]
+	whitespace = blank-at-eol, space-before-tab, tab-in-indent, blank-at-eof, tabwidth=4, cr-at-eol
+        eol = lf
+	editor = emacs -nw -q
+        filemode = true
+	autocrlf = input
+	safecrlf = true
+[status]
+	relativePaths = true
+[merge]
+	ff = false
+	conflictstyle = diff3
+	tool = diffmerge
+[rerere]
+	enabled = 1
+[rebase]
+	autosquash = true
+[branch]
+	autosetuprebase = always
+[push]
+	default = tracking
+[gc]
+	auto = 0
+[diff]
+	tool = diffmerge
+[difftool "diffmerge"]
+	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
+[mergetool "diffmerge"]
+	trustExitCode = true
+	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
+[credential]
+	helper = osxkeychain
+[github]
+	user = malkolm
+[ghi]
+	token = !security find-internet-password -a malkolm -s github.com -l 'ghi token' -w
