@@ -28,7 +28,6 @@ install grep --default-names
 install gzip
 install hub
 install imagemagick
-install less
 install m4
 install macvim --override-system-vi --custom-system-icons
 install make
