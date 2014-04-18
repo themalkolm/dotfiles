@@ -1,0 +1,6 @@
+#!/bin/bash
+
+gem install homesick
+homesick clone themalkolm/dotfiles.git
+homesick rc dotfiles
+homesick symlink dotfiles
