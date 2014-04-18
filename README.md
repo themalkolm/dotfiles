@@ -8,5 +8,8 @@ how to use
 ==========
 
 ```sh
-curl -fsSL https://raw.github.com/themalkolm/dotfiles/master/install | bash -s
+gem install homesick
+homesick clone themalkolm/dotfiles
+homesick rc dotfiles
+homesick symlink
 ```
