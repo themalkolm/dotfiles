@@ -15,6 +15,7 @@ install file-formula
 install findutils --default-names
 install gawk
 install git
+install gibo
 install gnu-indent --default-names
 install gnu-sed --default-names
 install gnu-tar --default-names
