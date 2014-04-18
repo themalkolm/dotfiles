@@ -1,9 +1,9 @@
 #!/bin/bash
 
-test $(which brew | wc -l) -eq 0 &&
-  echo "err: Install brew first!" >&2 && exit 1
-
 sudo -v # ask for password only at the beginning
+
+test $(which brew | wc -l) -eq 0 &&
+  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
 brew bundle ~/.homesick/repos/dotfiles
 
