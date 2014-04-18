@@ -8,11 +8,14 @@ sudo -v # ask for password only at the beginning
 brew update
 brew upgrade
 
-# gnu tools
+# taps
 brew tap homebrew/dupes
+brew tap phinze/homebrew-cask
 
+# tools
 brew install bash
 brew install binutils  --default-names
+brew install brew-cask
 brew install ccache
 brew install cmake
 brew install coreutils --default-names
