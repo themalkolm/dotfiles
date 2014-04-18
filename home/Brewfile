@@ -2,11 +2,9 @@ update
 upgrade
 
 tap homebrew/dupes
-tap phinze/homebrew-cask
 
 install bash
 install binutils  --default-names
-install brew-cask
 install ccache
 install cmake
 install coreutils --default-names
@@ -48,5 +46,8 @@ install watch
 install wdiff --with-gettext
 install wget
 install zsh
+
+tap phinze/homebrew-cask
+install brew-cask
 
 cleanup
