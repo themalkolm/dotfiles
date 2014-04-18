@@ -1,0 +1,74 @@
+tap homebrew/dupes
+tap phinze/cask
+
+ack
+ascii
+autoconf
+bash
+binutils
+brew-cask
+cask
+ccache
+cmake
+coreutils
+cscope
+curl --with-ares --with-gssapi --with-idn --with-libmetalink --with-openssl --with-rtmp --with-ssh
+diffutils
+emacs --cocoa --japanese --keep-ctags --srgb --use-git-head --with-gnutls --with-x --HEAD
+file-formula
+findutils --default-names
+freetype --universal --without-subpixel
+gawk
+gdbm --universal
+gettext --universal
+gibo
+git --with-blk-sha1 --with-brewed-curl --with-brewed-openssl --with-gettext --with-pcre --with-persistent-https --without-completions --HEAD
+glib --test --universal --with-static
+gmp --32-bit --c++11
+gnu-indent --default-names
+gnu-sed --default-names
+gnu-tar
+gnu-which --default-names
+gnutls --with-guile --with-p11-kit
+go --cross-compile-all --cross-compile-common --without-cgo --HEAD
+gpatch
+grep --default-names
+gzip
+hub --without-completions --HEAD
+imagemagick --with-fontconfig --with-ghostscript --with-jasper --with-liblqr --with-librsvg --with-libtiff --with-libwmf --with-little-cms --with-little-cms2 --with-openexr --with-perl --with-quantum-depth-16 --with-quantum-depth-32 --with-quantum-depth-8 --with-webp --with-x11 --without-freetype --without-jpeg --without-libpng --without-magick-plus-plus --HEAD
+jpeg --universal
+homebrew/dupes/less --with-pcre
+libffi
+libpng --universal
+libssh2
+libtasn1 --universal
+libtool --universal
+homebrew/dupes/m4
+macvim --custom-icons --override-system-vim --with-lua --with-luajit --with-python3 --without-cscope --without-python --HEAD
+homebrew/dupes/make --with-guile
+midnight-commander
+homebrew/dupes/nano
+homebrew/dupes/ncurses --universal
+nettle
+node --enable-debug --without-completion --without-npm --devel --HEAD
+homebrew/dupes/openssh --with-keychain-support --with-ldns
+openssl
+pcre --universal
+pkg-config
+python --quicktest --universal --with-brewed-tk --with-dtrace --with-poll --without-gdbm --without-readline --without-sqlite --HEAD
+readline
+homebrew/dupes/rsync
+s-lang --with-oniguruma --with-pcre
+screen
+sqlite --universal --with-docs --with-fts --with-functions --without-readline --without-rtree
+ssh-copy-id
+subversion --java --perl --ruby --universal --with-brewed-openssl --with-python
+tig --with-docs --HEAD
+tree
+homebrew/dupes/unzip
+vim --disable-nls --override-system-vi --with-client-server --with-lua --with-luajit --with-mzscheme --with-perl --with-python3 --with-tcl --without-python --without-ruby --HEAD
+watch
+wdiff --with-gettext
+wget --enable-debug --enable-iri --HEAD
+xz --universal
+zsh --disable-etcdir
