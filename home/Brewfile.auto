@@ -14,7 +14,7 @@ install coreutils
 install cscope
 install curl --with-ares --with-gssapi --with-idn --with-libmetalink --with-openssl --with-rtmp --with-ssh
 install diffutils
-install emacs --cocoa --japanese --keep-ctags --srgb --use-git-head --with-gnutls --with-x --HEAD
+install emacs --cocoa --japanese --keep-ctags --srgb --use-git-head --with-gnutls --with-x
 install file-formula
 install findutils --default-names
 install freetype --universal --without-subpixel
@@ -22,7 +22,7 @@ install gawk
 install gdbm --universal
 install gettext --universal
 install gibo
-install git --with-blk-sha1 --with-brewed-curl --with-brewed-openssl --with-gettext --with-pcre --with-persistent-https --without-completions --HEAD
+install git --with-blk-sha1 --with-brewed-curl --with-brewed-openssl --with-gettext --with-pcre --with-persistent-https --without-completions
 install glib --test --universal --with-static
 install gmp --32-bit --c++11
 install gnu-indent --default-names
@@ -30,12 +30,12 @@ install gnu-sed --default-names
 install gnu-tar
 install gnu-which --default-names
 install gnutls --with-guile --with-p11-kit
-install go --cross-compile-all --cross-compile-common --without-cgo --HEAD
+install go --cross-compile-all --cross-compile-common --without-cgo
 install gpatch
 install grep --default-names
 install gzip
-install hub --without-completions --HEAD
-install imagemagick --with-fontconfig --with-ghostscript --with-jasper --with-liblqr --with-librsvg --with-libtiff --with-libwmf --with-little-cms --with-little-cms2 --with-openexr --with-perl --with-quantum-depth-16 --with-quantum-depth-32 --with-quantum-depth-8 --with-webp --with-x11 --without-freetype --without-jpeg --without-libpng --without-magick-plus-plus --HEAD
+install hub --without-completions
+install imagemagick --with-fontconfig --with-ghostscript --with-jasper --with-liblqr --with-librsvg --with-libtiff --with-libwmf --with-little-cms --with-little-cms2 --with-openexr --with-perl --with-quantum-depth-16 --with-quantum-depth-32 --with-quantum-depth-8 --with-webp --with-x11 --without-freetype --without-jpeg --without-libpng --without-magick-plus-plus
 install jpeg --universal
 install less --with-pcre
 install libffi
@@ -44,18 +44,18 @@ install libssh2
 install libtasn1 --universal
 install libtool --universal
 install m4
-install macvim --custom-icons --override-system-vim --with-lua --with-luajit --with-python3 --without-cscope --without-python --HEAD
+install macvim --custom-icons --override-system-vim --with-lua --with-luajit --with-python3 --without-cscope --without-python
 install make --with-guile
 install midnight-commander
 install nano
 install ncurses --universal
 install nettle
-install node --enable-debug --without-completion --without-npm --devel --HEAD
+install node --enable-debug --without-completion --without-npm --devel
 install openssh --with-keychain-support --with-ldns
 install openssl
 install pcre --universal
 install pkg-config
-install python --quicktest --universal --with-brewed-tk --with-dtrace --with-poll --without-gdbm --without-readline --without-sqlite --HEAD
+install python --quicktest --universal --with-brewed-tk --with-dtrace --with-poll --without-gdbm --without-readline --without-sqlite
 install readline
 install rsync
 install s-lang --with-oniguruma --with-pcre
@@ -63,12 +63,12 @@ install screen
 install sqlite --universal --with-docs --with-fts --with-functions --without-readline --without-rtree
 install ssh-copy-id
 install subversion --java --perl --ruby --universal --with-brewed-openssl --with-python
-install tig --with-docs --HEAD
+install tig --with-docs
 install tree
 install unzip
-install vim --disable-nls --override-system-vi --with-client-server --with-lua --with-luajit --with-mzscheme --with-perl --with-python3 --with-tcl --without-python --without-ruby --HEAD
+install vim --disable-nls --override-system-vi --with-client-server --with-lua --with-luajit --with-mzscheme --with-perl --with-python3 --with-tcl --without-python --without-ruby
 install watch
 install wdiff --with-gettext
-install wget --enable-debug --enable-iri --HEAD
+install wget --enable-debug --enable-iri
 install xz --universal
 install zsh --disable-etcdir
