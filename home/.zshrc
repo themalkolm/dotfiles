@@ -5,12 +5,13 @@ export LC_ALL=en_US.UTF-8
 # homebrew stuff first
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/share/python:$PATH"
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+export PATH="$(brew --prefix gnu-sed)/libexec/gnubin:$PATH"
+export PATH="$(brew --prefix gnu-tar)/libexec/gnubin:$PATH"
 
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
+export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
+export MANPATH="$(brew --prefix gnu-sed)/libexec/gnuman:$MANPATH"
+export MANPATH="$(brew --prefix gnu-tar)/libexec/gnuman:$MANPATH"
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
