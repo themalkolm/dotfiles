@@ -1,0 +1,11 @@
+#!/bin/bash
+
+test $(which brew | wc -l) -eq 0 &&
+  echo "err: Install brew first!" >&2 && exit 1
+
+sudo -v # ask for password only at the beginning
+
+brew bundle ~/.homesick/repos/dotfiles/Brewfiles
+
+pip install --upgrade setuptools
+pip install --upgrade pip
