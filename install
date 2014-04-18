@@ -1,8 +1,7 @@
 #!/bin/bash
 
-sudo -v # gem requires sudo rights
-
-gem install homesick
-homesick clone themalkolm/dotfiles.git
-homesick rc dotfiles
+sudo gem install homesick
+: homesick clone themalkolm/dotfiles
 homesick symlink dotfiles
+echo
+echo "You must run 'homesick rc dotfiles' to finish installation."
