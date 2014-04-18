@@ -20,7 +20,13 @@ test $(which brew | wc -l) -eq 0 &&
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
 do_untap
+
+brew update
+brew upgrade
+
 brew bundle "$(homesick show_path dotfiles)/home"
+
+brew cleanup
 
 pip install --upgrade setuptools
 pip install --upgrade pip

@@ -1,6 +1,3 @@
-update
-upgrade
-
 tap homebrew/dupes
 
 install bash
@@ -46,8 +43,3 @@ install watch
 install wdiff --with-gettext
 install wget
 install zsh
-
-tap phinze/homebrew-cask
-install brew-cask
-
-cleanup
