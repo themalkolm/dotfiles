@@ -27,7 +27,6 @@ install gzip
 install hub
 install imagemagick
 install m4
-install macvim --override-system-vi --custom-system-icons
 install make
 install mc
 install nano
