@@ -13,7 +13,7 @@ formulas="$(brew list -1)"
 for f in $formulas; do
   # try default
   if brew info $f &> /dev/null; then
-    options=$(brew info $f | sed -n '/^--/p' | tr '\n' ' ' | sed 's/ *$//g')
+    options=$(brew info $f | sed -n '/^--/p' | sed '/--HEAD/d' | tr '\n' ' ' | sed 's/ *$//g')
     echo install $f $options
     continue;
   fi
