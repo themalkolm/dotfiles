@@ -5,7 +5,7 @@ sudo -v # ask for password only at the beginning
 test $(which brew | wc -l) -eq 0 &&
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
-brew bundle "$(homesick show_path dotfiles)"
+brew bundle "$(homesick show_path dotfiles)/home"
 
 pip install --upgrade setuptools
 pip install --upgrade pip
