@@ -38,6 +38,7 @@ install openssh --with-brewed-openssl
 install python
 install rsync
 install screen
+install ssh-copy-id
 install svn
 install tig
 install tree
