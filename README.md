@@ -19,5 +19,6 @@ how to update
 
 ```sh
 homesick pull dotfiles
+homesick rc dotfiles
 homesick symlink
 ```
