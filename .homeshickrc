@@ -1,18 +1,26 @@
 #!/bin/bash
 
+ORIGINAL_TAPS="$(brew tap)"
+
+function do_untap {
+  for tap in $ORIGINAL_TAPS; do
+    brew untap $tap
+  done
+}
+
+function do_tap {
+  for tap in $ORIGINAL_TAPS; do
+    brew tap $tap
+  done
+}
+
+trap do_tap EXIT
+
 test $(which brew | wc -l) -eq 0 &&
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
-taps="$(brew tap)"
-for tap in $taps; do
-  brew untap $tap
-done
-
+do_untap
 brew bundle "$(homesick show_path dotfiles)/home"
-
-for tap in $taps; do
-  brew tap $tap
-done
 
 pip install --upgrade setuptools
 pip install --upgrade pip
