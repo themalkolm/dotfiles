@@ -11,13 +11,13 @@ install emacs
 install file-formula
 install findutils --default-names
 install gawk
-install git
 install gibo
+install git
 install gnu-indent --default-names
 install gnu-sed --default-names
 install gnu-tar --default-names
-install gnutls --default-names
 install gnu-which --default-names
+install gnutls --default-names
 install go
 install gpatch
 install grep --default-names
