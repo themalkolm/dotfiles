@@ -1,0 +1,25 @@
+#!/bin/bash
+
+taps=$(brew tap)
+for tap in $taps; do
+  echo tap $tap
+done
+echo ""
+formulas="$(brew list -1)"
+for f in $formulas; do
+  # try default
+  if brew info $f &> /dev/null; then
+    options=$(brew info $f | sed -n '/^--/p' | tr '\n' ' ' | sed 's/ *$//g')
+    echo $f $options
+    continue;
+  fi
+
+  # go over taps one by one
+  for tap in $taps; do
+    if brew info $tap/$f &>/dev/null; then
+      options=$(brew info $tap/$f | sed -n '/^--/p' | tr '\n' ' ' | sed 's/ *$//g')
+      echo $tap/$f $options
+      break
+    fi
+  done
+done
