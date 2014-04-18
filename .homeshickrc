@@ -5,7 +5,7 @@ test $(which brew | wc -l) -eq 0 &&
 
 sudo -v # ask for password only at the beginning
 
-brew bundle ~/.homesick/repos/dotfiles/Brewfiles
+brew bundle ~/.homesick/repos/dotfiles
 
 pip install --upgrade setuptools
 pip install --upgrade pip
