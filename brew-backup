@@ -14,7 +14,7 @@ for f in $formulas; do
   # try default
   if brew info $f &> /dev/null; then
     options=$(brew info $f | sed -n '/^--/p' | tr '\n' ' ' | sed 's/ *$//g')
-    echo $f $options
+    echo install $f $options
     continue;
   fi
 
@@ -22,7 +22,7 @@ for f in $formulas; do
   for tap in $taps; do
     if brew info $tap/$f &>/dev/null; then
       options=$(brew info $tap/$f | sed -n '/^--/p' | tr '\n' ' ' | sed 's/ *$//g')
-      echo $tap/$f $options
+      echo install $tap/$f $options
       break
     fi
   done
