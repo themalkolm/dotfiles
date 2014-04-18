@@ -1,6 +1,0 @@
-#!/bin/bash
-
-sudo gem install homesick
-: homesick clone themalkolm/dotfiles
-$(homesick show_path dotfiles)/.homeshickrc
-homesick symlink dotfiles
