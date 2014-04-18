@@ -1,4 +1,8 @@
 #!/bin/bash
+#
+# brew-backup generates Brewfile that will hopefully install the same
+# software with the same options.
+#
 
 taps=$(brew tap)
 for tap in $taps; do
