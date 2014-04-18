@@ -2,6 +2,7 @@
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
+# homebrew stuff first
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/share/python:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
