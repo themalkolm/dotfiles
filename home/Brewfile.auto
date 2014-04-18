@@ -12,63 +12,67 @@ install ccache
 install cmake
 install coreutils
 install cscope
-install curl --with-ares --with-gssapi --with-idn --with-libmetalink --with-openssl --with-rtmp --with-ssh
+install curl
 install diffutils
-install emacs --cocoa --japanese --keep-ctags --srgb --use-git-head --with-gnutls --with-x
+install emacs
 install file-formula
-install findutils --default-names
-install freetype --universal --without-subpixel
+install findutils
+install freetype
 install gawk
-install gdbm --universal
-install gettext --universal
+install gdbm
+install gettext
+install ghostscript
 install gibo
-install git --with-blk-sha1 --with-brewed-curl --with-brewed-openssl --with-gettext --with-pcre --with-persistent-https --without-completions
-install glib --test --universal --with-static
-install gmp --32-bit --c++11
-install gnu-indent --default-names
-install gnu-sed --default-names
+install git
+install glib
+install gmp
+install gnu-indent
+install gnu-sed
 install gnu-tar
-install gnu-which --default-names
-install gnutls --with-guile --with-p11-kit
-install go --cross-compile-all --cross-compile-common --without-cgo
+install gnu-which
+install gnutls
+install go
 install gpatch
-install grep --default-names
+install grep
 install gzip
-install hub --without-completions
-install imagemagick --with-fontconfig --with-ghostscript --with-jasper --with-liblqr --with-librsvg --with-libtiff --with-libwmf --with-little-cms --with-little-cms2 --with-openexr --with-perl --with-quantum-depth-16 --with-quantum-depth-32 --with-quantum-depth-8 --with-webp --with-x11 --without-freetype --without-jpeg --without-libpng --without-magick-plus-plus
-install jpeg --universal
-install less --with-pcre
+install hub
+install imagemagick
+install jbig2dec
+install jpeg
+install less
 install libffi
-install libpng --universal
+install libpng
 install libssh2
-install libtasn1 --universal
-install libtool --universal
+install libtasn1
+install libtiff
+install libtool
+install little-cms2
 install m4
-install macvim --custom-icons --override-system-vim --with-lua --with-luajit --with-python3 --without-cscope --without-python
-install make --with-guile
+install macvim
+install make
 install midnight-commander
 install nano
-install ncurses --universal
+install ncurses
 install nettle
-install node --enable-debug --without-completion --without-npm
-install openssh --with-keychain-support --with-ldns
+install node
+install openssh
 install openssl
-install pcre --universal
+install pcre
 install pkg-config
-install python --quicktest --universal --with-brewed-tk --with-dtrace --with-poll --without-gdbm --without-readline --without-sqlite
+install python
 install readline
 install rsync
-install s-lang --with-oniguruma --with-pcre
+install s-lang
 install screen
-install sqlite --universal --with-docs --with-fts --with-functions --without-readline --without-rtree
+install sqlite
 install ssh-copy-id
-install subversion --java --perl --ruby --universal --with-brewed-openssl --with-python
-install tig --with-docs
+install subversion
+install tig
 install tree
 install unzip
-install vim --disable-nls --override-system-vi --with-client-server --with-lua --with-luajit --with-mzscheme --with-perl --with-python3 --with-tcl --without-python --without-ruby
+install vim
 install watch
-install wdiff --with-gettext
-install wget --enable-debug --enable-iri
-install xz --universal
-install zsh --disable-etcdir
+install wdiff
+install wget
+install xz
+install zsh

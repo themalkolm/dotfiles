@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # brew-backup generates Brewfile that will hopefully install the same
-# software with the same options.
+# software (WARNING: options won't be kept)
 #
 
 taps=$(brew tap)
@@ -13,16 +13,14 @@ formulas="$(brew list -1)"
 for f in $formulas; do
   # try default
   if brew info $f &> /dev/null; then
-    options=$(brew info $f | sed -n '/^--/p' | sed -e '/--HEAD/d' -e '/--devel/' | tr '\n' ' ' | sed 's/ *$//g')
-    echo install $f $options
+    echo install $f
     continue;
   fi
 
   # go over taps one by one
   for tap in $taps; do
     if brew info $tap/$f &>/dev/null; then
-      options=$(brew info $tap/$f | sed -n '/^--/p' | tr '\n' ' ' | sed 's/ *$//g')
-      echo install $tap/$f $options
+      echo install $tap/$f
       break
     fi
   done
