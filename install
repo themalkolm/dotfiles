@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo -v # gem requires sudo rights
+
 gem install homesick
 homesick clone themalkolm/dotfiles.git
 homesick rc dotfiles
