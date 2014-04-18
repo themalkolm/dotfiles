@@ -13,3 +13,11 @@ homesick clone themalkolm/dotfiles
 homesick rc dotfiles
 homesick symlink
 ```
+
+how to update
+=============
+
+```sh
+homesick pull dotfiles
+homesick symlink
+```
