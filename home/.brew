@@ -1,0 +1,57 @@
+#!/bin/bash -x
+
+test $(which brew | wc -l) -eq 0 &&
+  echo "err: Install brew first!" >&2 && exit 1
+
+sudo -v # ask for password only at the beginning
+
+brew update
+brew upgrade
+
+# gnu tools
+brew tap homebrew/dupes
+
+brew install bash
+brew install binutils  --default-names
+brew install ccache
+brew install cmake
+brew install coreutils --default-names
+brew install curl
+brew install diffutils --default-names
+brew install emacs
+brew install file-formula
+brew install findutils --default-names
+brew install gawk
+brew install git
+brew install gnu-indent --default-names
+brew install gnu-sed --default-names
+brew install gnu-tar --default-names
+brew install gnu-tls --default-names
+brew install gnu-which --default-names
+brew install gpatch
+brew install grep --default-names
+brew install gzip
+brew install imagemagick
+brew install less
+brew install m4
+brew install macvim --override-system-vi --custom-system-icons
+brew install make
+brew install mc
+brew install nano
+brew install npm
+brew install openssh --with-brewed-openssl
+brew install python
+brew install rsync
+brew install screen
+brew install svn
+brew install tig
+brew install tree
+brew install unzip
+brew install vim --override-system-vi
+brew install watch
+brew install wdiff --with-gettext
+brew install wget
+brew install zsh
+
+pip install --upgrade setuptools
+pip install --upgrade pip
