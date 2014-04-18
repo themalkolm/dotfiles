@@ -4,7 +4,7 @@ dotfiles
 Various dotfiles & some initial configuration. Helps me to have same env
 on different laptops.
 
-how to use
+how to install
 ==========
 
 ```sh
