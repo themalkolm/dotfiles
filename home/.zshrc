@@ -41,13 +41,15 @@ export SAVEHIST=10000
 # done
 export PATH=~/.bin:$PATH
 
+PROJECTS_DIR=~/Documents/projects
+
 # enable git-boots
-export PATH=~/projects/git-boots:~/projects/git-boots/sandbox:$PATH
-export PATH=~/projects/git-imerge:$PATH
+export PATH=$PROJECTS_DIR/git-boots:$PROJECTS_DIR/git-boots/sandbox:$PATH
+export PATH=$PROJECTS_DIR/git-imerge:$PATH
 
 # enagle git-nucleo
-export PATH=~/projects/git-nucleo:$PATH
-export PATH=~/projects/git-nucleo/sandbox:$PATH
+export PATH=$PROJECTS_DIR/git-nucleo:$PATH
+export PATH=$PROJECTS_DIR/git-nucleo/sandbox:$PATH
 
 # jumps
 alias j='cd'
@@ -148,7 +150,7 @@ alias gfix='git-fix'
 # gerrit
 alias git-review-it="rev=$1; gco master && gq @{u} && git pull && git cherry-pick $rev && git push master-rev && gq @{u} && git checkout $rev"
 
-cd ~/Documents/projects
+cd $PROJECTS_DIR
 
 function open_chrome() { open /Applications/Google\ Chrome.app/ "$@"; }
 function google() { open /Applications/Google\ Chrome.app/ "http://www.google.com/search?q= $1"; }
@@ -163,20 +165,20 @@ function jira() {
 
 alias spm="npm -reg http://npm-registry.spotify.net -userconfig ~/.spmrc --always-auth=true"
 
-export PATH=~/projects/client-daemon/build:$PATH
+export PATH=$PROJECTS_DIR/client-daemon/build:$PATH
 
 export USE_CCACHE=1
 export CCACHE_CPP2=1
 export PATH=/usr/local/Cellar/ccache/3.1.9/libexec:$PATH
 
 # make go happy
-export GOPATH=~/projects/go
+export GOPATH=$PROJECTS_DIR/go
 
 # automatically use these tools
 export PATH=$GOPATH/bin:$PATH
 
 #
-export PATH=~/projects/git-extras/bin:$PATH
+export PATH=$PROJECTS_DIR/git-extras/bin:$PATH
 
 alias review="git review -vvv"
 
