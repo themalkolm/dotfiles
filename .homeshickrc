@@ -31,3 +31,5 @@ brew cleanup
 # dunno, brew suggests me to do it
 pip install --upgrade setuptools
 pip install --upgrade pip
+
+pip install git-review
