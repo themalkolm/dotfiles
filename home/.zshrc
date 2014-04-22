@@ -10,6 +10,9 @@ export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 export PATH="$(brew --prefix gnu-sed)/libexec/gnubin:$PATH"
 export PATH="$(brew --prefix gnu-tar)/libexec/gnubin:$PATH"
 
+# ccache
+export PATH="$(brew --prefix ccache)/libexec:$PATH"
+
 export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
 export MANPATH="$(brew --prefix gnu-sed)/libexec/gnuman:$MANPATH"
 export MANPATH="$(brew --prefix gnu-tar)/libexec/gnuman:$MANPATH"
