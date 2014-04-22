@@ -36,7 +36,7 @@ export PROMPT="%{$fg[white]%}%~%# %{$reset_color%}"
 export GREP_OPTIONS='--color=auto'
 
 # ls
-alias ls='ls -GF'
+alias ls='ls -GF --color=auto'
 
 # history
 export HISTFILE=$HOME/.zhistory
