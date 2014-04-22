@@ -43,3 +43,6 @@ install watch
 install wdiff --with-gettext
 install wget
 install zsh
+install graphviz
+install ninja
+install doxygen
