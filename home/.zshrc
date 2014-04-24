@@ -12,6 +12,9 @@ export PATH="$(brew --prefix gnu-tar)/libexec/gnubin:$PATH"
 
 # ccache
 export PATH="$(brew --prefix ccache)/libexec:$PATH"
+export USE_CCACHE=1
+export CCACHE_CPP2=1
+export CCACHE_COMPRESS=1
 
 export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
 export MANPATH="$(brew --prefix gnu-sed)/libexec/gnuman:$MANPATH"
@@ -36,7 +39,7 @@ export PROMPT="%{$fg[white]%}%~%# %{$reset_color%}"
 export GREP_OPTIONS='--color=auto'
 
 # ls
-alias ls='ls -GF'
+alias ls='ls -GF --color=auto'
 
 # history
 export HISTFILE=$HOME/.zhistory
@@ -177,9 +180,6 @@ function jira() {
 }
 
 alias spm="npm -reg http://npm-registry.spotify.net -userconfig ~/.spmrc --always-auth=true"
-
-export USE_CCACHE=1
-export CCACHE_CPP2=1
 
 # make go happy
 export GOPATH=$PROJECTS_DIR/go

@@ -46,3 +46,4 @@ install zsh
 install graphviz
 install ninja
 install doxygen
+install htop
