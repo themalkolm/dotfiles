@@ -157,6 +157,7 @@ alias gr='git rebase'
 alias gra='git rebase --abort'
 alias grc='git rebase --continue'
 alias gri='git rebase -i --autosquash'
+alias griu='git rebase -i --autosquash @{u}'
 
 # boots
 alias gsed='git-sed'
