@@ -41,3 +41,22 @@ pip install git-review
 # git-greb is amazing tool from dfanjul
 #
 go get -u github.com/daniel-fanjul-alcuten/git-greb
+
+#
+# symlink projects, legacy reasons
+#
+mkdir -p ~/Documents/projects
+ln -s ~/Documents/projects ~/projects
+
+PROJECTS_DIR=~/projects
+
+#
+# git-boots is my own git toolset
+#
+if cd $PROJECTS_DIR/git-boots &> /dev/null
+then
+  git pull
+  cd ..
+else
+  git clone git@github.com:themalkolm/git-boots.git $PROJECTS_DIR/git-boots
+fi
