@@ -26,6 +26,15 @@ brew upgrade
 
 brew bundle "$(homesick show_path dotfiles)/home"
 
+#
+# install boost
+#
+if ! brew list boost | grep -q boost; then
+  brew unlink python
+  brew install boost
+  brew link python
+fi
+
 brew cleanup
 
 # dunno, brew suggests me to do it
