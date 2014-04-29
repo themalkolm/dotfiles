@@ -21,7 +21,7 @@ test $(which brew | wc -l) -eq 0 &&
 
 do_untap
 
-brew update
+GIT_MERGE_AUTOEDIT='no' brew update
 brew upgrade
 
 brew bundle "$(homesick show_path dotfiles)/home"
@@ -32,4 +32,31 @@ brew cleanup
 pip install --upgrade setuptools
 pip install --upgrade pip
 
+#
+# git-review script to work with gerrit
+#
 pip install git-review
+
+#
+# git-greb is amazing tool from dfanjul
+#
+go get -u github.com/daniel-fanjul-alcuten/git-greb
+
+#
+# symlink projects, legacy reasons
+#
+mkdir -p ~/Documents/projects
+ln -s ~/Documents/projects ~/projects
+
+PROJECTS_DIR=~/projects
+
+#
+# git-boots is my own git toolset
+#
+if cd $PROJECTS_DIR/git-boots &> /dev/null
+then
+  git pull
+  cd ..
+else
+  git clone git@github.com:themalkolm/git-boots.git $PROJECTS_DIR/git-boots
+fi
