@@ -32,4 +32,7 @@ brew cleanup
 pip install --upgrade setuptools
 pip install --upgrade pip
 
+#
+# git-review script to work with gerrit
+#
 pip install git-review
