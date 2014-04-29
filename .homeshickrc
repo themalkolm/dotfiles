@@ -21,7 +21,7 @@ test $(which brew | wc -l) -eq 0 &&
 
 do_untap
 
-brew update
+GIT_MERGE_AUTOEDIT='no' brew update
 brew upgrade
 
 brew bundle "$(homesick show_path dotfiles)/home"
