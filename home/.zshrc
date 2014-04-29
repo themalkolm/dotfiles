@@ -94,7 +94,7 @@ alias gam='git commit --amend'
 alias gap='git commit --amend -C HEAD'
 
 # branch
-alias gb='git branch'
+alias gb='git greb -t'
 alias gba='git branch -a'
 alias gbr='git branch -r'
 
@@ -157,6 +157,7 @@ alias gr='git rebase'
 alias gra='git rebase --abort'
 alias grc='git rebase --continue'
 alias gri='git rebase -i --autosquash'
+alias griu='git rebase -i --autosquash @{u}'
 
 # boots
 alias gsed='git-sed'
