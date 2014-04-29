@@ -94,7 +94,7 @@ alias gam='git commit --amend'
 alias gap='git commit --amend -C HEAD'
 
 # branch
-alias gb='git branch'
+alias gb='git greb -t'
 alias gba='git branch -a'
 alias gbr='git branch -r'
 
