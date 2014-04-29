@@ -36,3 +36,8 @@ pip install --upgrade pip
 # git-review script to work with gerrit
 #
 pip install git-review
+
+#
+# git-greb is amazing tool from dfanjul
+#
+go get -u github.com/daniel-fanjul-alcuten/git-greb
