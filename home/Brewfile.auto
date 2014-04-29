@@ -14,11 +14,15 @@ install coreutils
 install cscope
 install curl
 install diffutils
+install dos2unix
+install doxygen
 install emacs
 install file-formula
 install findutils
 install freetype
 install gawk
+install gcc
+install gd
 install gdbm
 install gettext
 install ghostscript
@@ -33,8 +37,10 @@ install gnu-which
 install gnutls
 install go
 install gpatch
+install graphviz
 install grep
 install gzip
+install htop-osx
 install hub
 install imagemagick
 install jbig2dec
@@ -47,6 +53,7 @@ install libtasn1
 install libtiff
 install libtool
 install little-cms2
+install lynx
 install m4
 install macvim
 install make
@@ -54,6 +61,7 @@ install midnight-commander
 install nano
 install ncurses
 install nettle
+install ninja
 install node
 install openssh
 install openssl
@@ -74,5 +82,6 @@ install vim
 install watch
 install wdiff
 install wget
+install wine
 install xz
 install zsh
