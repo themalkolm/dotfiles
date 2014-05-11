@@ -10,6 +10,11 @@ export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 export PATH="$(brew --prefix gnu-sed)/libexec/gnubin:$PATH"
 export PATH="$(brew --prefix gnu-tar)/libexec/gnubin:$PATH"
 
+#android
+export ANDROID_HOME="$(brew --prefix android-sdk)"
+export ANDROID_NDK="$(brew --prefix android-ndk)"
+export PATH="$ANDROID_HOME/tools:$PATH"
+
 # ccache
 export PATH="$(brew --prefix ccache)/libexec:$PATH"
 export USE_CCACHE=1

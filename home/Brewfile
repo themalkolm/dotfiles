@@ -47,3 +47,5 @@ install graphviz
 install ninja
 install doxygen
 install htop
+install android-sdk
+install android-ndk
