@@ -47,5 +47,6 @@ install graphviz
 install ninja
 install doxygen
 install htop
+install homebrew/completions/vagrant-completion
 install android-sdk
 install android-ndk
