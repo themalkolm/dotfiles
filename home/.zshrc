@@ -138,9 +138,7 @@ alias gcd='cd $(git rev-parse --show-toplevel || echo ".")'
 
 # fetch
 alias gfa='git fetch --all'
-alias gf='git fetch o'
-alias gff='git fetch --prune --tags o; git remote prune o'
-alias gsync='git submodule update --init --recursive; git fetch o; git fetch --prune --tags o; git remote prune o'
+alias gsync='git submodule update --init --recursive; git fetch --all --prune --tags'
 
 # find
 alias gfind='git ls-files | grep'
