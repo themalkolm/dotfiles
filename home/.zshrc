@@ -20,6 +20,7 @@ export PATH="$(brew --prefix ccache)/libexec:$PATH"
 export USE_CCACHE=1
 export CCACHE_CPP2=1
 export CCACHE_COMPRESS=1
+ccache -M10G # 10G should be enough
 
 export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
 export MANPATH="$(brew --prefix gnu-sed)/libexec/gnuman:$MANPATH"
