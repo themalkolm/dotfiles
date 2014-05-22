@@ -101,8 +101,11 @@ alias gap='git commit --amend -C HEAD'
 
 # branch
 alias gb='git greb -t'
+alias gbd='git branch -d'
+alias gbD='git branch -D'
 alias gba='git branch -a'
 alias gbr='git branch -r'
+alias gup='git branch --set-upstream-to'
 
 # checkout
 alias gco='git checkout'
@@ -127,6 +130,7 @@ alias gss='git show --stat'
 
 # status
 alias gs='git status'
+alias gsh='git status --short'
 
 # stash
 alias gst='git stash'
