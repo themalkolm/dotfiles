@@ -2,6 +2,52 @@
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
+######################################################################
+# zshell configuration
+######################################################################
+
+# load & run compinit
+autoload -U compinit
+compinit -i
+
+zstyle ':completion:*' hosts off
+
+# colors
+autoload -U colors
+colors
+
+# ignore duplicates in the history
+setopt HIST_IGNORE_DUPS
+
+# prompt
+autoload -U promptinit
+promptinit
+prompt adam2
+
+
+DIRSTACKFILE="$HOME/.cache/zsh/dirs"
+if [[ -f $DIRSTACKFILE ]] && [[ $#dirstack -eq 0 ]]; then
+  dirstack=( ${(f)"$(< $DIRSTACKFILE)"} )
+  [[ -d $dirstack[1] ]] && cd $dirstack[1]
+fi
+chpwd() {
+  print -l $PWD ${(u)dirstack} >$DIRSTACKFILE
+}
+
+DIRSTACKSIZE=20
+
+setopt autopushd pushdsilent pushdtohome
+
+## Remove duplicate entries
+setopt pushdignoredups
+
+## This reverts the +/- operators.
+setopt pushdminus
+
+######################################################################
+# other
+######################################################################
+
 # homebrew stuff first
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
@@ -27,16 +73,6 @@ export MANPATH="$(brew --prefix gnu-sed)/libexec/gnuman:$MANPATH"
 export MANPATH="$(brew --prefix gnu-tar)/libexec/gnuman:$MANPATH"
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-
-# load & run compinit
-autoload -U compinit
-compinit -i
-
-zstyle ':completion:*' hosts off
-
-# colors
-autoload -U colors
-colors
 
 export PROMPT="%{$fg[white]%}%~%# %{$reset_color%}"
 #export RPROMPT="%*"
