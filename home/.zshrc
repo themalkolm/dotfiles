@@ -85,6 +85,9 @@ alias ema='emacsclient -a "" -c $(cdup=$(git rev-parse --show-cdup); for f in $(
 alias emd='emacsclient -a "" -c $(cdup=$(git rev-parse --show-cdup); for f in $(git diff --name-only); do echo $cdup$f; done)'
 alias emdc='emacsclient -a "" -c $(cdup=$(git rev-parse --show-cdup); for f in $(git diff --cached --name-only); do echo $cdup$f; done)'
 
+# diff
+alias diff='colordiff'
+
 # git
 alias g='git'
 

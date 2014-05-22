@@ -53,3 +53,4 @@ install android-ndk
 install mutt
 install gti
 install sl
+install colordiff
