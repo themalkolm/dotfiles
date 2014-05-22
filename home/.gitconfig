@@ -6,6 +6,9 @@
 	diff = auto
 	status = auto
 	branch = auto
+	interactive = auto
+[color "status"]
+       untracked = cyan
 [core]
 	whitespace = blank-at-eol, space-before-tab, tab-in-indent, blank-at-eof, tabwidth=4, cr-at-eol
         eol = lf
@@ -42,3 +45,8 @@
 	user = malkolm
 [ghi]
 	token = !security find-internet-password -a malkolm -s github.com -l 'ghi token' -w
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[advice]
+	statusHints = false

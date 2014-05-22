@@ -10,11 +10,17 @@ export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 export PATH="$(brew --prefix gnu-sed)/libexec/gnubin:$PATH"
 export PATH="$(brew --prefix gnu-tar)/libexec/gnubin:$PATH"
 
+#android
+export ANDROID_HOME="$(brew --prefix android-sdk)"
+export ANDROID_NDK="$(brew --prefix android-ndk)"
+export PATH="$ANDROID_HOME/tools:$PATH"
+
 # ccache
 export PATH="$(brew --prefix ccache)/libexec:$PATH"
 export USE_CCACHE=1
 export CCACHE_CPP2=1
 export CCACHE_COMPRESS=1
+ccache -M10G # 10G should be enough
 
 export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
 export MANPATH="$(brew --prefix gnu-sed)/libexec/gnuman:$MANPATH"
@@ -73,11 +79,11 @@ alias jj='cd -'
 alias ju='cd ..'
 
 # emacs
-alias em='emacs -nw'
-export GIT_EDITOR="emacs -nw"
-alias ema='emacs -nw $(cdup=$(git rev-parse --show-cdup); for f in $(git diff --name-only HEAD^..HEAD); do echo $cdup$f; done)'
-alias emd='emacs -nw $(cdup=$(git rev-parse --show-cdup); for f in $(git diff --name-only); do echo $cdup$f; done)'
-alias emdc='emacs -nw $(cdup=$(git rev-parse --show-cdup); for f in $(git diff --cached --name-only); do echo $cdup$f; done)'
+alias em='emacsclient -a "" -c'
+export GIT_EDITOR='emacsclient -a "" -c'
+alias ema='emacsclient -a "" -c $(cdup=$(git rev-parse --show-cdup); for f in $(git diff --name-only HEAD^..HEAD); do echo $cdup$f; done)'
+alias emd='emacsclient -a "" -c $(cdup=$(git rev-parse --show-cdup); for f in $(git diff --name-only); do echo $cdup$f; done)'
+alias emdc='emacsclient -a "" -c $(cdup=$(git rev-parse --show-cdup); for f in $(git diff --cached --name-only); do echo $cdup$f; done)'
 
 # git
 alias g='git'
@@ -95,8 +101,11 @@ alias gap='git commit --amend -C HEAD'
 
 # branch
 alias gb='git greb -t'
+alias gbd='git branch -d'
+alias gbD='git branch -D'
 alias gba='git branch -a'
 alias gbr='git branch -r'
+alias gup='git branch --set-upstream-to'
 
 # checkout
 alias gco='git checkout'
@@ -121,6 +130,7 @@ alias gss='git show --stat'
 
 # status
 alias gs='git status'
+alias gsh='git status --short'
 
 # stash
 alias gst='git stash'
@@ -133,9 +143,7 @@ alias gcd='cd $(git rev-parse --show-toplevel || echo ".")'
 
 # fetch
 alias gfa='git fetch --all'
-alias gf='git fetch o'
-alias gff='git fetch --prune --tags o; git remote prune o'
-alias gsync='git submodule update --init --recursive; git fetch o; git fetch --prune --tags o; git remote prune o'
+alias gsync='git submodule update --init --recursive; git fetch --all --prune --tags'
 
 # find
 alias gfind='git ls-files | grep'
