@@ -11,6 +11,7 @@ install ascii
 install autoconf
 install automake
 install bash
+install bdw-gc
 install binutils
 install boost
 install brew-cask
@@ -25,6 +26,7 @@ install curl
 install diffutils
 install dos2unix
 install doxygen
+install elinks
 install emacs
 install faac
 install ffmpeg
@@ -52,6 +54,7 @@ install gpatch
 install graphviz
 install grep
 install gsl
+install gti
 install gzip
 install hexedit
 install htop-osx
@@ -81,6 +84,7 @@ install macvim
 install make
 install midnight-commander
 install mpfr
+install mutt
 install nano
 install ncurses
 install nettle
@@ -105,14 +109,17 @@ install sdl2_ttf
 install sdl_gfx
 install sdl_image
 install sdl_ttf
+install sl
 install sqlite
 install ssh-copy-id
 install subversion
 install tig
+install tokyo-cabinet
 install tree
 install unzip
 install vagrant-completion
 install vim
+install w3m
 install watch
 install wdiff
 install webp
