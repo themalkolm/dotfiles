@@ -79,11 +79,11 @@ alias jj='cd -'
 alias ju='cd ..'
 
 # emacs
-alias em='emacs -nw'
-export GIT_EDITOR="emacs -nw"
-alias ema='emacs -nw $(cdup=$(git rev-parse --show-cdup); for f in $(git diff --name-only HEAD^..HEAD); do echo $cdup$f; done)'
-alias emd='emacs -nw $(cdup=$(git rev-parse --show-cdup); for f in $(git diff --name-only); do echo $cdup$f; done)'
-alias emdc='emacs -nw $(cdup=$(git rev-parse --show-cdup); for f in $(git diff --cached --name-only); do echo $cdup$f; done)'
+alias em='emacsclient -a "" -c'
+export GIT_EDITOR='emacsclient -a "" -c'
+alias ema='emacsclient -a "" -c $(cdup=$(git rev-parse --show-cdup); for f in $(git diff --name-only HEAD^..HEAD); do echo $cdup$f; done)'
+alias emd='emacsclient -a "" -c $(cdup=$(git rev-parse --show-cdup); for f in $(git diff --name-only); do echo $cdup$f; done)'
+alias emdc='emacsclient -a "" -c $(cdup=$(git rev-parse --show-cdup); for f in $(git diff --cached --name-only); do echo $cdup$f; done)'
 
 # git
 alias g='git'
