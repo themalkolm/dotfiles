@@ -6,6 +6,9 @@
 	diff = auto
 	status = auto
 	branch = auto
+	interactive = auto
+[color "status"]
+       untracked = cyan
 [core]
 	whitespace = blank-at-eol, space-before-tab, tab-in-indent, blank-at-eof, tabwidth=4, cr-at-eol
         eol = lf
