@@ -50,3 +50,6 @@ install htop
 install homebrew/completions/vagrant-completion
 install android-sdk
 install android-ndk
+install mutt
+install gti
+install sl
