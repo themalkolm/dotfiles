@@ -54,8 +54,10 @@ go get -u github.com/daniel-fanjul-alcuten/git-greb
 #
 # symlink projects, legacy reasons
 #
-mkdir -p ~/Documents/projects
-ln -s ~/Documents/projects ~/projects
+if ! test -e ~/Documents/projects; then
+  mkdir -p ~/Documents/projects
+  ln -s ~/Documents/projects ~/projects
+fi
 
 PROJECTS_DIR=~/projects
 
