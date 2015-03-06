@@ -219,15 +219,6 @@ cd $PROJECTS_DIR
 function open_chrome() { open /Applications/Google\ Chrome.app/ "$@"; }
 function google() { open /Applications/Google\ Chrome.app/ "http://www.google.com/search?q= $1"; }
 function wiki() { open /Applications/Google\ Chrome.app/ "http://en.wikipedia.org/wiki/Special:Search?search= $1"; }
-function jira() {
-  local arg="$1"
-  if test "$arg" = "${arg/-/}"; then
-    arg="CORE-$arg"
-  fi
-  open /Applications/Google\ Chrome.app/ "https://jira.spotify.net/browse/$arg";
-}
-
-alias spm="npm -reg http://npm-registry.spotify.net -userconfig ~/.spmrc --always-auth=true"
 
 # make go happy
 export GOPATH=$PROJECTS_DIR/go
