@@ -11,6 +11,7 @@ autoload -U compinit
 compinit -i
 
 zstyle ':completion:*' hosts off
+zstyle ':completion:*' menu select
 
 # colors
 autoload -U colors
@@ -51,26 +52,6 @@ setopt pushdminus
 # homebrew stuff first
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
-export PATH="/usr/local/share/python:$PATH"
-export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
-export PATH="$(brew --prefix gnu-sed)/libexec/gnubin:$PATH"
-export PATH="$(brew --prefix gnu-tar)/libexec/gnubin:$PATH"
-
-#android
-export ANDROID_HOME="$(brew --prefix android-sdk)"
-export ANDROID_NDK="$(brew --prefix android-ndk)"
-export PATH="$ANDROID_HOME/tools:$PATH"
-
-# ccache
-export PATH="$(brew --prefix ccache)/libexec:$PATH"
-export USE_CCACHE=1
-export CCACHE_CPP2=1
-export CCACHE_COMPRESS=1
-ccache -M10G # 10G should be enough
-
-export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
-export MANPATH="$(brew --prefix gnu-sed)/libexec/gnuman:$MANPATH"
-export MANPATH="$(brew --prefix gnu-tar)/libexec/gnuman:$MANPATH"
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
@@ -78,10 +59,11 @@ export PROMPT="%{$fg[white]%}%~%# %{$reset_color%}"
 #export RPROMPT="%*"
 
 # grep
-export GREP_OPTIONS='--color=auto'
+alias grep='grep --color=auto'
 
 # ls
-alias ls='ls -GF --color=auto'
+alias ls='ls -G'
+alias ll='ls -laG'
 
 # history
 export HISTFILE=$HOME/.zhistory
@@ -89,25 +71,7 @@ export HIST_REDUCE_BLANKS=1
 export HISTSIZE=10000
 export SAVEHIST=10000
 
-# brew install coreutils
-# for cmd in cat date echo readlink sed basename sort;
-# do
-#   mkdir -p ~/.bin
-#   (test -e ~/.bin/$cmd) || (ln -s $(which g$cmd) ~/.bin/$cmd)
-# done
-# export PATH=~/.bin:$PATH
-
 PROJECTS_DIR=~/Documents/projects
-
-# enable git-boots
-export PATH="$PROJECTS_DIR/git-boots:$PATH"
-export PATH="$PROJECTS_DIR/git-boots/sandbox:$PATH"
-
-export PATH="$PROJECTS_DIR/git-imerge:$PATH"
-
-# enable git-nucleo
-export PATH="$PROJECTS_DIR/git-nucleo:$PATH"
-export PATH="$PROJECTS_DIR/git-nucleo/sandbox:$PATH"
 
 # jumps
 alias j='cd'
@@ -116,7 +80,7 @@ alias ju='cd ..'
 
 # emacs
 alias em='emacsclient -a "" -c'
-export GIT_EDITOR='emacsclient -a "" -c'
+export GIT_EDITOR='vim'
 alias ema='emacsclient -a "" -c $(cdup=$(git rev-parse --show-cdup); for f in $(git diff --name-only HEAD^..HEAD); do echo $cdup$f; done)'
 alias emd='emacsclient -a "" -c $(cdup=$(git rev-parse --show-cdup); for f in $(git diff --name-only); do echo $cdup$f; done)'
 alias emdc='emacsclient -a "" -c $(cdup=$(git rev-parse --show-cdup); for f in $(git diff --cached --name-only); do echo $cdup$f; done)'
@@ -137,9 +101,9 @@ alias gcc='git commit -C'
 alias gcm='git commit -m'
 alias gam='git commit --amend'
 alias gap='git commit --amend -C HEAD'
+alias gfix='git commit --fixup'
 
 # branch
-alias gb='git greb -t'
 alias gbd='git branch -d'
 alias gbD='git branch -D'
 alias gba='git branch -a'
@@ -206,19 +170,7 @@ alias grc='git rebase --continue'
 alias gri='git rebase -i --autosquash'
 alias griu='git rebase -i --autosquash @{u}'
 
-# boots
-alias gsed='git-sed'
-alias gt='git-table'
-alias gfix='git-fix'
-
-# gerrit
-alias git-review-it="rev=$1; gco master && gq @{u} && git pull && git cherry-pick $rev && git push master-rev && gq @{u} && git checkout $rev"
-
 cd $PROJECTS_DIR
-
-function open_chrome() { open /Applications/Google\ Chrome.app/ "$@"; }
-function google() { open /Applications/Google\ Chrome.app/ "http://www.google.com/search?q= $1"; }
-function wiki() { open /Applications/Google\ Chrome.app/ "http://en.wikipedia.org/wiki/Special:Search?search= $1"; }
 
 # make go happy
 export GOPATH=$PROJECTS_DIR/go
@@ -226,4 +178,26 @@ export GOPATH=$PROJECTS_DIR/go
 # automatically use these tools
 export PATH="$GOPATH/bin:$PATH"
 
-alias review="git review -vvv"
+# diable packer/vagrant checks
+export CHECKPOINT_DISABLE=1
+
+# added by travis gem
+[ -f /Users/malkolm/.travis/travis.sh ] && source /Users/malkolm/.travis/travis.sh
+
+# docker
+alias drun='function _run(){ docker run --rm -it -v $(pwd):/work --workdir /work $@ /bin/bash }; _run'
+
+# kubectl
+# alias k='function _k() { kubectl $@ }; _k'
+# source <(kubectl completion zsh)
+source ~/.kubectl_completion
+
+# pip
+# source <(pip completion --zsh)
+source ~/.pip_completion
+
+alias htop='sudo htop'
+alias gup='git pull --rebase'
+
+# week
+alias week='echo Current week: $(date +%V)'

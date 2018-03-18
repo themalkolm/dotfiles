@@ -14,8 +14,9 @@
         eol = lf
 	editor = emacs -nw -q
         filemode = true
-	autocrlf = input
+	autocrlf = false
 	safecrlf = true
+	excludesfile = ~/.gitignore
 [status]
 	relativePaths = true
 [merge]
@@ -50,3 +51,10 @@
 	smudge = git-media-smudge %f
 [advice]
 	statusHints = false
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[http]
+	sslVerify = true
+	followRedirects = true
