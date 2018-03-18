@@ -190,7 +190,7 @@ alias drun='function _run(){ docker run --rm -it -v $(pwd):/work --workdir /work
 # kubectl
 # alias k='function _k() { kubectl $@ }; _k'
 # source <(kubectl completion zsh)
-source ~/.kubectl_completion
+[ -f /Users/malkolm/.kubectl_completion ] && source ~/.kubectl_completion
 
 # pip
 # source <(pip completion --zsh)
