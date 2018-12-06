@@ -185,7 +185,7 @@ export CHECKPOINT_DISABLE=1
 [ -f /Users/malkolm/.travis/travis.sh ] && source /Users/malkolm/.travis/travis.sh
 
 # docker
-alias drun='function _run(){ docker run --rm -it -v $(pwd):/work --workdir /work $@ /bin/bash }; _run'
+alias drun='function _run(){ docker run --rm -it -v $(pwd):/work --workdir /work $@ /bin/sh }; _run'
 
 # kubectl
 # alias k='function _k() { kubectl $@ }; _k'
@@ -201,3 +201,19 @@ alias gup='git pull --rebase'
 
 # week
 alias week='echo Current week: $(date +%V)'
+
+# launchtl-find
+
+launchctl-find () {
+  local paths=( \
+    ~/Library/LaunchAgents
+    /Library/LaunchAgents
+    /Library/LaunchDaemons
+    /System/Library/LaunchAgents
+    /System/Library/LaunchDaemons
+  )
+
+  for p in "${paths[@]}"; do
+    grep -r "${p}" -e "${1}"
+  done
+}
