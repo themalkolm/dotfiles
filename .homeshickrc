@@ -4,10 +4,7 @@ test $(which brew | wc -l) -eq 0 &&
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
 GIT_MERGE_AUTOEDIT='no' brew update
-brew upgrade
-
 brew bundle --file="$(homesick show_path dotfiles)/home/Brewfile"
-brew cleanup
 
 #
 # symlink projects, legacy reasons
