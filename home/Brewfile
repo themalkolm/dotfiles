@@ -1,56 +1,26 @@
-tap homebrew/dupes
-
-install android-ndk
-install android-sdk
 install bash
-install binutils  --default-names
-install ccache
-install cmake
-install colordiff
-install coreutils --default-names
+install cask
+install cloc
 install curl
-install diffutils --default-names
-install doxygen
-install emacs
-install file-formula
-install findutils --default-names
-install gawk
-install gibo
+install colordiff
+install diffutils
+install dos2unix
 install git
-install gnu-indent --default-names
-install gnu-sed --default-names
-install gnu-tar --default-names
-install gnu-which --default-names
-install gnutls --default-names
 install go
-install gpatch
-install graphviz
-install grep --default-names
-install gti
+install grep
 install gzip
-install homebrew/completions/vagrant-completion
 install htop
-install hub
 install imagemagick
-install m4
+install less
 install make
-install mc
-install mutt
-install nano
-install ninja
-install npm
-install openssh --with-brewed-openssl
-install python
+install midnight-commander
+install openssh
 install rsync
 install screen
-install sl
-install ssh-copy-id
-install svn
 install tig
 install tree
 install unzip
-install vim --override-system-vi
+install vim
 install watch
-install wdiff --with-gettext
 install wget
 install zsh
