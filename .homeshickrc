@@ -6,7 +6,7 @@ test $(which brew | wc -l) -eq 0 &&
 GIT_MERGE_AUTOEDIT='no' brew update
 brew upgrade
 
-(cd $(homesick show_path dotfiles)/home; brew bundle)
+brew bundle "$(homesick show_path dotfiles)/home"
 brew cleanup
 
 #
