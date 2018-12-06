@@ -41,16 +41,5 @@ fi
 
 PROJECTS_DIR=~/projects
 
-#
-# git-boots is my own git toolset
-#
-if cd $PROJECTS_DIR/git-boots &> /dev/null
-then
-  git pull
-  cd ..
-else
-  git clone git@github.com:themalkolm/git-boots.git $PROJECTS_DIR/git-boots
-fi
-
 # mac defaults
 defaults write com.apple.finder AppleShowAllFiles -bool YES
