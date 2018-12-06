@@ -53,8 +53,6 @@ setopt pushdminus
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-
 export PROMPT="%{$fg[white]%}%~%# %{$reset_color%}"
 #export RPROMPT="%*"
 
