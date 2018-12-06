@@ -51,9 +51,6 @@ pip install git-review
 #
 go get -u github.com/daniel-fanjul-alcuten/git-greb
 
-# fonts
-cp -f fonts/* ~/Library/Fonts
-
 #
 # symlink projects, legacy reasons
 #
