@@ -1,35 +1,13 @@
 #!/bin/bash
 
-ORIGINAL_TAPS="$(brew tap)"
-
-function do_untap {
-  for tap in $ORIGINAL_TAPS; do
-    brew untap $tap
-  done
-}
-
-function do_tap {
-  for tap in $ORIGINAL_TAPS; do
-    brew tap $tap
-  done
-}
-
-trap do_tap EXIT
-
 test $(which brew | wc -l) -eq 0 &&
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-
-do_untap
 
 GIT_MERGE_AUTOEDIT='no' brew update
 brew upgrade
 
 brew bundle "$(homesick show_path dotfiles)/home"
 brew cleanup
-
-# dunno, brew suggests me to do it
-pip install --upgrade setuptools
-pip install --upgrade pip
 
 #
 # symlink projects, legacy reasons
